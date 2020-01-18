@@ -1,0 +1,70 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+   Place favicon.ico in the root directory -->
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+
+  <form action="#" method="GET">
+
+    <div class="container" style="margin: 50px;">  
+      <div class="row">
+        
+        <div class="col">
+            <input class="form-control" type="text" placeholder="count number" style="margin: 10px;" name="count_number"> <br>
+            <input class="form-control" type="text" placeholder="search number" style="margin: 10px;" name="search_number"> <br>
+            <input class="form-control" type="text" placeholder="input string" style="margin: 10px;" name="input_str"> <br>
+            <input class="form-control" type="text" placeholder="search string" style="margin: 10px;" name="search_str"> <br>
+        </div>
+
+        <div class="col" >
+          <select multiple class="form-control" style="margin: 10px; height: 290px;" id="exampleFormControlSelect2" name="task_number">
+            <option>task 1</option>
+            <option>task 2</option>
+            <option>task 3</option>
+            <option>task 4</option>
+            <option>task 5</option>
+            <option>task 6</option>
+            <option>task 7</option>
+            <option>task 8</option>
+            <option>task 9</option>
+            <option>task 10</option>
+          </select>
+         
+        </div>
+
+        <div class="col" >
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" style="margin: 10px;" rows="9">{{ result }}</textarea>
+            <input type="submit" value="Get result" class="btn btn-info" style="margin: 10px;">
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
