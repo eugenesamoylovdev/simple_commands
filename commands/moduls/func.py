@@ -80,3 +80,17 @@ def get_cut_list(input_str, count_number):
                 if (index + 1) % count_number != 0:
                     return_list.append(m_list[index]) 
     return return_list
+
+def get_common_symbol(input_str):
+    max = 0
+    common_symbol = ''
+    for index in range(len(input_str)):
+        symbol = input_str[index].lower()
+        symbol_count = len(input_str) - len(input_str.replace(symbol, '')) 
+        if symbol_count > max:
+            max = symbol_count + 1
+            common_symbol = symbol
+    
+    return common_symbol    
+
+

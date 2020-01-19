@@ -23,3 +23,6 @@ class TasksWorkTests(TestCase):
     def test_task7(self):
         result = tasks.task_7('aaa bbb ccc dd ff gg hh jj kk ll rr ee eeww fds erwer', 2)
         self.assertIs(type(result) == str, True)
+    def test_task8(self):
+        result = tasks.task_8('Extremity direction existence as dashwoods do up')
+        self.assertIs(result == 'e', True)

@@ -1,5 +1,5 @@
 import traceback
-from commands.moduls import func
+import func
 
 def complete_task(task, count_number = '', search_number = '', input_str = '', search_str = ''):
     
@@ -25,6 +25,9 @@ def complete_task(task, count_number = '', search_number = '', input_str = '', s
         
         elif task == 'task 7' and input_str != '' and count_number != '':
             result = task_7(input_str, int(count_number))
+
+        elif task == 'task 8' and input_str != '':
+            result = task_8(input_str)
 
         else:
             result = f'error in {task}: could not find arguments'
@@ -91,6 +94,14 @@ def task_7(input_str, count_number):
     else:
         return 'error: wrong type in input_str, count_number'
 
+def task_8(input_str):
+
+    if type(input_str) == str:
+        symbol = func.get_common_symbol(input_str)
+        return symbol
+    else:
+        return 'error: wrong type in input_str, count_number'
+
 if __name__ == '__main__':
     pass
     #result = complete_task('task1', count_number=10)
@@ -100,5 +111,6 @@ if __name__ == '__main__':
     #result = complete_task('task5', count_number=10, search_number=45)
     #result = complete_task('task6', input_str='aa bb cc dd ff dd gh aa ss dd sa', search_str='aa')
     #result = complete_task('task7', input_str='aaa bbb ccc dd ff gg hh jj kk ll rr ee eeww fds erwer', count_number=2)
-
-    #print(result) 
+    result = complete_task('task 8',input_str='Extremity direction existence as dashwoods do up')
+    
+    print(result)
