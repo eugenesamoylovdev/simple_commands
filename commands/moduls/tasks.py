@@ -1,5 +1,5 @@
 import traceback
-import func
+from commands.moduls import func
 
 def complete_task(task, count_number = '', search_number = '', input_str = '', search_str = ''):
     
@@ -20,14 +20,17 @@ def complete_task(task, count_number = '', search_number = '', input_str = '', s
         elif task == 'task 5' and count_number != '' and search_number != '':
              result = task_5(int(count_number), int(search_number))
         
-        elif task == 'task 6' and input_str != '' and search_str != '':
-            result = task_6(input_str, search_str)
+        elif task == 'task 6' and count_number != '':
+             result = task_6(int(count_number))
         
-        elif task == 'task 7' and input_str != '' and count_number != '':
-            result = task_7(input_str, int(count_number))
+        elif task == 'task 7' and input_str != '' and search_str != '':
+            result = task_7(input_str, search_str)
+        
+        elif task == 'task 8' and input_str != '' and count_number != '':
+            result = task_8(input_str, int(count_number))
 
-        elif task == 'task 8' and input_str != '':
-            result = task_8(input_str)
+        elif task == 'task 9' and input_str != '':
+            result = task_9(input_str)
 
         else:
             result = f'error in {task}: could not find arguments'
@@ -78,7 +81,16 @@ def task_5(count_number, search_number):
     else:
         return 'error: wrong type in count_number, search_number'
 
-def task_6(input_str, search_str):
+def task_6(count_number):
+    
+    if type(count_number) == int:
+        m_list = func.get_random_list(count_number) 
+        sort_list = func.quicksort(m_list.tolist()) 
+        return f'{func.list_to_string(m_list)}\n{func.list_to_string(sort_list)}'
+    else:
+        return 'error: wrong type in count_number, search_number'
+
+def task_7(input_str, search_str):
      
     if type(input_str) == str and type(search_str) == str:
         entry_count = func.get_entry_coutn_of_str(input_str, search_str)
@@ -86,7 +98,7 @@ def task_6(input_str, search_str):
     else:
         return 'error: wrong type in input_str, search_str'
 
-def task_7(input_str, count_number):
+def task_8(input_str, count_number):
 
     if type(input_str) == str and type(count_number) == int:
         output_list = func.get_cut_list(input_str, count_number)
@@ -94,7 +106,7 @@ def task_7(input_str, count_number):
     else:
         return 'error: wrong type in input_str, count_number'
 
-def task_8(input_str):
+def task_9(input_str):
 
     if type(input_str) == str:
         symbol = func.get_common_symbol(input_str)

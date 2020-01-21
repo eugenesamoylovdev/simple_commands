@@ -18,11 +18,14 @@ class TasksWorkTests(TestCase):
         result = tasks.task_5(10, 5)
         self.assertIs(type(result) == str, True)
     def test_task6(self):
-        result = tasks.task_6('aa bb cc dd ff dd gh aa ss dd sa', 'aa')
+        result = tasks.task_6(10)
         self.assertIs(type(result) == str, True)
     def test_task7(self):
-        result = tasks.task_7('aaa bbb ccc dd ff gg hh jj kk ll rr ee eeww fds erwer', 2)
+        result = tasks.task_7('aa bb cc dd ff dd gh aa ss dd sa', 'aa')
         self.assertIs(type(result) == str, True)
     def test_task8(self):
-        result = tasks.task_8('Extremity direction existence as dashwoods do up')
+        result = tasks.task_8('aaa bbb ccc dd ff gg hh jj kk ll rr ee eeww fds erwer', 2)
+        self.assertIs(type(result) == str, True)
+    def test_task9(self):
+        result = tasks.task_9('Extremity direction existence as dashwoods do up')
         self.assertIs(result == 'e', True)

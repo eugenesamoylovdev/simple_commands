@@ -93,4 +93,18 @@ def get_common_symbol(input_str):
     
     return common_symbol    
 
+def quicksort(m_list):
+    if len(m_list) <= 1:
+       return m_list
+    else:
+       q = random.choice(m_list)
+
+    l_list = [n for n in m_list if n < q]
+ 
+    e_list = [q] * m_list.count(q)
+    h_list = [n for n in m_list if n > q]
+    
+    return quicksort(l_list) + e_list + quicksort(h_list)    
+
+
 
